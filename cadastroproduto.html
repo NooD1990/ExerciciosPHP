@@ -1,0 +1,42 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <TITLE>Formulario de Cadastro de Produto</TITLE>
+</head>
+<body class="homepage">
+    <header>
+        <div id="cabeca">
+            <nav class="menu-bar">
+                <class="logo"><a href=home.php><img src="imagenssite/logo.jpg" alt="Logo"></a>
+            </nav>
+        </div>
+    </header>
+    <section>
+    <h2>Formulário de cadastro do produto</h2>
+    <div id="formulario">
+        <form name="formulario" method="POST" action="cadastroproduto.php" enctype="multipart/form-data">
+            Código: <input type="text" name="codigo" id="codigo" size="10">
+            Descrição: <input type="text" name="descricao" id="descricao" size=30>
+            Cor: <input type="text" name="cor" id="cor" size="30">
+            Tamanho: <input type="text" name="tamanho" id="tamanho" size="30">
+            Preço: <input type="text" name="preco" id="preco" size="30">
+            Código da marca: <input type="text" name="codmarca" id="codmarca" size="10">
+            Código da categoria: <input type="text" name="codcategoria" id="codcategoria" size="10">
+            Código Tipo: <input type="text" name="codtipo" id="codtipo" size="10">
+            Imagem 1: <input type="file" name="foto1" id="foto1">
+            Imagem 2: <input type="file" name="foto2" id="foto2">
+            <br><br>
+            <div id="botoes">
+                <input type="submit" name="gravar" value="gravar">
+                <input type="submit" name="alterar" value="alterar">
+                <input type="submit" name="excluir" value="excluir">
+                <input type="submit" name="pesquisar" value="pesquisar">
+            </div>
+            </form>
+        </div>
+        </section>
+</body>
+</HTML>

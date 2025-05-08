@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <TITLE>Home</TITLE>
+</head>
+<body class="homepage">
+    <header>
+        <div id="cabeca">
+            <nav class="pesquisa-bar">
+                <!-- Logo à esquerda -->
+                <div class="logo">
+                    <a href="home.php"><img src="imagenssite/logo.jpg" alt="Logo"></a>
+                </div>
+    
+                <!-- Barra de busca centralizada -->
+                <form class="search-box" method="GET" action="buscar.php">
+                    <input type="text" class="search-box-input" name="query" placeholder="O que você procura?">
+                    <button type="submit" class="search-box-button">🔍</button>
+                </form>
+
+                <div class="carrinhoicon">
+                    <a href="carrinho.php" class="login-button">🛒</a>
+                </div>
+    
+                <!-- Botão de login à direita -->
+                <div class="login-header">
+                    <a href="login.html" class="login-button">Entrar</a>
+                </div>                
+            </nav>
+        </div>
+    </header>
+      
+    <section style="display: flex;">
+        <!-- BARRA LATERAL DE FILTRO -->
+        <aside style="width: 250px; padding: 20px; background-color: #f0f0f0;">
+            <form name="cadastromarcas" method="post" action="home.php">
+                <h3>Marcas</h3>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="nike"> Nike</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="adidas"> Adidas</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="puma"> Puma</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="penalti"> Penalti</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="everlast"> Everlast</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="marca[]" value="fila"> Fila</label>
+                </div>
+                <button type="submit" name="pesquisarmarcas">Filtrar</button>
+            </form>
+            
+            <form name="cadastrocategoria" method="post" action="home.php">
+                <h3>Categoria</h3>
+                <div>
+                    <label><input type="checkbox" name="categoria[]" value="masculino"> Masculino </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="categoria[]" value="feminino"> Feminino </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="categoria[]" value="infantil"> Infantil </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="categoria[]" value="unissex"> Unissex </label>
+                </div>
+                <button type="submit" name="pesquisarcategorias">Filtrar</button>
+            </form>
+            
+            <form name="cadastrotipo" method="post" action="home.php">
+                <h3>Tipo</h3>
+                <div>
+                    <label><input type="checkbox" name="tipo[]" value="camisa"> Camisa </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="tipo[]" value="bermuda"> Bermuda </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="tipo[]" value="calca"> Calça </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="tipo[]" value="calcado"> Calçados </label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="tipo[]" value="acessorio"> Acessórios </label>
+                </div>
+                <button type="submit" name="pesquisartipos">Filtrar</button>
+            </form>
+        </aside>
+    
+        <!-- VITRINE DE PRODUTOS (esta parte será carregada pelo PHP) -->
+        <div id="vitrine" style="flex: 1; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Os produtos serão inseridos dinamicamente pelo PHP -->
+            
+            <!-- Exemplo de estrutura de produto (para referência) -->
+            <!--
+            <div style="width: 30%; border: 1px solid #ccc; border-radius: 10px; padding: 10px; box-shadow: 2px 2px 8px #aaa; text-align: center;">
+                <img src="imagens/produto.jpg" width="180" height="180" style="object-fit: cover;">
+                <h3>Nome do Produto</h3>
+                <p>R$ 99,90</p>
+                <form method="POST" action="home.php">
+                    <input type="hidden" name="comprar" value="1">
+                    <input type="hidden" name="produto_id" value="123">
+                    <button type="submit">COMPRAR</button>
+                </form>
+            </div>
+            -->
+        </div>
+    </section>
+    
+</body>
+</html>

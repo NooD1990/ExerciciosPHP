@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <TITLE>Carrinho de Compras</TITLE>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .produto-imagem {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        
+        .btn {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .btn-remover {
+            background-color: #f44336;
+        }
+        
+        .btn-atualizar {
+            background-color: #2196F3;
+        }
+        
+        .btn-continuar {
+            background-color: #ff9800;
+        }
+        
+        .quantidade-input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .carrinho-vazio {
+            text-align: center;
+            padding: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="cabeca">
+            <nav class="pesquisa-bar">
+                <!-- Logo à esquerda -->
+                <div class="logo">
+                    <a href="home.php"><img src="imagenssite/logo.jpg" alt="Logo"></a>
+                </div>
+    
+                <!-- Barra de busca centralizada -->
+                <form class="search-box" method="GET" action="buscar.php">
+                    <input type="text" class="search-box-input" name="query" placeholder="O que você procura?">
+                    <button type="submit" class="search-box-button">🔍</button>
+                </form>
+
+                <div class="carrinhoicon">
+                    <a href="carrinho.php" class="login-button">🛒</a>
+                </div>
+    
+                <!-- Botão de login à direita -->
+                <div class="login-header">
+                    <a href="login.html" class="login-button">Entrar</a>
+                </div>                
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container" style="padding: 20px;">
+        <h1>Seu Carrinho de Compras</h1>
+        
+        <!-- O conteúdo do carrinho será inserido aqui pelo PHP -->
+        <div id="conteudo-carrinho">
+            <!-- Esta parte será preenchida dinamicamente pelo PHP -->
+        </div>
+    </div>
+    
+</body>
+</html>
